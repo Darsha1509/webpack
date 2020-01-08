@@ -1,0 +1,23 @@
+{
+  "extends": ["airbnb", "plugin:flowtype/recommended", "prettier/flowtype"],
+  "plugins": ["react", "flowtype"],
+  "rules": {
+    "react/prop-types": 0,
+    "react/destructuring-assignment": 0,
+    "react/require-default-props": 0,
+    "import/no-named-as-default": 0,
+    "no-underscore-dangle": 0,
+    "react/default-props-match-prop-types": 0,
+    "import/no-unresolved": [2, { "ignore": ["^config$"] }]
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  }
+}
