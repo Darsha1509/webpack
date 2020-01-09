@@ -8,7 +8,8 @@
     "import/no-named-as-default": 0,
     "no-underscore-dangle": 0,
     "react/default-props-match-prop-types": 0,
-    "import/no-unresolved": [2, { "ignore": ["^config$"] }]
+    "import/no-unresolved": [2, { "ignore": ["^config$"] }],
+    "jsx-a11y/anchor-is-valid": 0
   },
   "parser": "babel-eslint",
   "parserOptions": {

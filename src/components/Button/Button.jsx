@@ -1,21 +1,18 @@
 // @flow
 
-import React from 'react';
+import React, { type Element } from 'react';
 import { Button } from '@material-ui/core';
-
-import ImportContactsRoundedIcon from '@material-ui/icons/ImportContactsRounded';
-import ArrowBackIosRoundedIcon from '@material-ui/icons/ArrowBackIosRounded';
 
 import './Button.sass';
 
 type Props = {
   innerText: string,
-  type: string,
+  icon: Element<'svg'>,
 };
 
-const MyButton = ({ innerText, type }: Props) => (
+const MyButton = ({ innerText, icon }: Props) => (
   <Button variant="contained" color="primary" className="button">
-    {type === 'book' ? <ImportContactsRoundedIcon /> : <ArrowBackIosRoundedIcon />}
+    {icon}
     <span className="innerText">{innerText}</span>
   </Button>
 );

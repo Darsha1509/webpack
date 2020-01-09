@@ -1,19 +1,18 @@
 // @flow
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import ImportContactsRoundedIcon from '@material-ui/icons/ImportContactsRounded';
 import kitten from '../../assets/images/kitten.jpg';
 
 import Container from '../../components/Container';
 import Button from '../../components/Button';
-
-import './home.sass';
+import Link from '../../components/Link';
 
 const Home = () => (
   <Container>
     <img src={kitten} alt="kitten with book" />
-    <Link to="/books" className="link">
-      <Button innerText="Books" type="book" />
+    <Link address="/books">
+      <Button innerText="Books" icon={<ImportContactsRoundedIcon />} />
     </Link>
   </Container>
 );

@@ -14,8 +14,8 @@ const App = () => (
     <CssBaseline />
     <h1>My React Books App!</h1>
     <Switch>
-      <Route path="/" component={Home} />
-      <Route path="/books" component={Books} />
+      <Route path="/" exact component={Home} />
+      <Route path="/books" exact component={Books} />
     </Switch>
   </>
 );
