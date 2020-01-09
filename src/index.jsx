@@ -1,5 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
+import { BrowserRouter as Router } from 'react-router-dom';
+import App from './App';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const root = document.getElementById('root');
+
+const render = () => {
+  if (root !== null) {
+    ReactDOM.render(
+      <Router>
+        <App />
+      </Router>,
+      root,
+    );
+  }
+};
+
+render();
