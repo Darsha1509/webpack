@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "private": true,
+  "engines": {
+    "node": ">=10.16.0",
+    "yarn": ">=1.21.1",
+    "npm": ">=6.13.4"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --env.mode=development",
