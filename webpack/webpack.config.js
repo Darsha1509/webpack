@@ -9,7 +9,7 @@ const htmlPlugin = new HtmlWebpackPlugin({
 module.exports = {
   entry: './src/index',
   output: {
-    path: path.resolve(__dirname, '..', 'dist'),
+    path: path.resolve(__dirname, '../dist'),
     filename: '[main].[contenthash].js',
   },
   optimization: {

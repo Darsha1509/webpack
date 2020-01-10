@@ -1,6 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const merge = require('webpack-merge');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
 
 const common = require('./webpack.config');
 
@@ -25,5 +26,5 @@ module.exports = merge(common, {
       },
     ],
   },
-  plugins: [miniCssPlugin],
+  plugins: [miniCssPlugin, new CompressionPlugin()],
 });
