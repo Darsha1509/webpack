@@ -7,7 +7,7 @@ import './Button.sass';
 
 type Props = {
   innerText: string,
-  icon: Element<'svg'>,
+  icon: Element<*>,
 };
 
 const MyButton = ({ innerText, icon }: Props) => (

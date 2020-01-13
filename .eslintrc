@@ -9,7 +9,8 @@
     "no-underscore-dangle": 0,
     "react/default-props-match-prop-types": 0,
     "import/no-unresolved": [2, { "ignore": ["^config$"] }],
-    "jsx-a11y/anchor-is-valid": 0
+    "jsx-a11y/anchor-is-valid": 0,
+    "flowtype/require-valid-file-annotation": [2, "always"]
   },
   "parser": "babel-eslint",
   "parserOptions": {
