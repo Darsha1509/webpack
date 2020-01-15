@@ -1,16 +1,18 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const htmlPlugin = new HtmlWebpackPlugin({
   filename: 'index.html',
-  template: './public/index.ejs',
+  template: './src/index.ejs',
 });
 
 module.exports = {
   entry: './src/index',
   output: {
     path: path.resolve(__dirname, '../dist'),
-    filename: '[main].[contenthash].js',
+    filename: '[name].bundle.js',
   },
   optimization: {
     splitChunks: {
@@ -20,9 +22,20 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        enforce: 'pre',
+        test: /\.js$/,
+        use: 'source-map-loader',
+      },
+
+      // TypeScript
+      {
+        test: /\.ts(x?)$/,
         exclude: /node_modules/,
-        use: 'babel-loader',
+        use: [
+          {
+            loader: 'ts-loader',
+          },
+        ],
       },
 
       // Loading images
@@ -41,7 +54,7 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['.js', '.json', '.jsx', '.css'],
+    extensions: ['.json', '.ts', '.tsx', '.js'],
   },
   plugins: [htmlPlugin],
 };

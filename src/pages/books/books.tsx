@@ -1,6 +1,4 @@
-// @flow
-
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import ArrowBackIosRoundedIcon from '@material-ui/icons/ArrowBackIosRounded';
 
 import Button from '../../components/Button';
@@ -9,10 +7,19 @@ import Link from '../../components/Link';
 
 import books from '../../content/books.json';
 
-const Books = () => (
+type book = {
+  id: number;
+  title: string;
+  author: string;
+  image: string;
+  price: number;
+  rating: number;
+};
+
+const Books: FunctionComponent<{}> = () => (
   <Container>
     <ul>
-      {books.map((book) => (
+      {books.map((book: book) => (
         <li key={book.id}>
           <b>Book:</b>
           {`${book.title} `}
